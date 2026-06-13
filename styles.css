@@ -89,19 +89,25 @@ body {
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
 }
 
-.title span {
+/* Each word stays on a single line; wrapping only happens between words. */
+.title .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.title .word + .word {
+  margin-left: 0.35em;
+}
+
+.title .word > span {
   display: inline-block;
   animation: wave 2.4s ease-in-out infinite;
 }
 
-.title .space {
-  width: 0.4em;
-}
-
 /* stagger each letter */
-.title span:nth-child(odd) { animation-delay: 0.1s; }
-.title span:nth-child(3n) { animation-delay: 0.2s; color: var(--stripe-a); }
-.title span:nth-child(5n) { animation-delay: 0.35s; color: var(--accent); }
+.title .word > span:nth-child(odd) { animation-delay: 0.1s; }
+.title .word > span:nth-child(3n) { animation-delay: 0.2s; color: var(--stripe-a); }
+.title .word > span:nth-child(5n) { animation-delay: 0.35s; color: var(--accent); }
 
 @keyframes wave {
   0%, 100% { transform: translateY(0); }
@@ -236,7 +242,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   body,
   .hardhat,
-  .title span,
+  .title .word > span,
   .progress-fill,
   .floatie,
   .card {
