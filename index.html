@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This site is under construction — something awesome is being built!" />
+  <title>🚧 Under Construction</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚧</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated gradient background lives in CSS on body -->
+
+  <!-- Floating tool emojis drift across the screen (added by JS) -->
+  <div class="floaties" aria-hidden="true"></div>
+
+  <main class="card">
+    <div class="hardhat" role="img" aria-label="construction worker">👷</div>
+
+    <h1 class="title">
+      <span>U</span><span>n</span><span>d</span><span>e</span><span>r</span>
+      <span class="space"></span>
+      <span>C</span><span>o</span><span>n</span><span>s</span><span>t</span><span>r</span><span>u</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>
+    </h1>
+
+    <p class="tagline" id="tagline">Pardon our dust — we're building something awesome.</p>
+
+    <!-- Barber-pole construction progress bar -->
+    <div class="progress" role="progressbar" aria-label="Construction progress" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-fill" id="progressFill"></div>
+      <span class="progress-label" id="progressLabel">0%</span>
+    </div>
+
+    <button class="cta" id="ctaBtn" type="button">Hammer Time! 🔨</button>
+
+    <div class="countdown" id="countdown" aria-live="polite"></div>
+
+    <p class="footer">No bytes were harmed in the making of this page.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
