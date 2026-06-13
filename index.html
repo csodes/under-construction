@@ -32,11 +32,39 @@
 
     <button class="cta" id="ctaBtn" type="button">Hammer Time! 🔨</button>
 
+    <button class="game-link" id="openGame" type="button">🎮 Play a game while you wait</button>
+
     <div class="countdown" id="countdown" aria-live="polite"></div>
 
     <p class="footer">No bytes were harmed in the making of this page.</p>
   </main>
 
+  <!-- Brick Stacker game modal -->
+  <div class="modal-overlay" id="gameModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Brick Stacker game">
+      <div class="modal-header">
+        <h2 class="modal-title">🧱 Brick Stacker</h2>
+        <button class="modal-close" id="closeGame" type="button" aria-label="Close game">✕</button>
+      </div>
+
+      <div class="game-hud">
+        <span>Height: <b id="gameScore">0</b></span>
+        <span>Best: <b id="gameBest">0</b></span>
+      </div>
+
+      <div class="game-stage">
+        <canvas id="gameCanvas" width="320" height="480"></canvas>
+        <div class="game-message" id="gameMessage">
+          <p id="gameMessageText">Tap to drop the brick.<br />Stack 'em as high as you can!</p>
+          <button class="cta" id="gameAction" type="button">Start 🧱</button>
+        </div>
+      </div>
+
+      <p class="game-hint">Tap / click / Space to drop · Esc to close</p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>

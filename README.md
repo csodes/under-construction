@@ -12,6 +12,8 @@ any static host like GitHub Pages, Netlify, or S3).
 - 💬 Rotating, lighthearted taglines
 - 🔨 "Hammer Time" button with confetti bursts
 - 🛠️ Floating tool emojis drifting up the screen
+- 🧱 **Brick Stacker** mini-game in a modal — one-tap stacking with a
+  `localStorage` high score
 - ⌨️ Hidden easter egg — try typing `build`
 - ♿ Respects `prefers-reduced-motion`
 
@@ -22,6 +24,7 @@ any static host like GitHub Pages, Netlify, or S3).
 | `index.html` | Page markup |
 | `styles.css` | Styling and animations |
 | `script.js` | Interactivity (progress, confetti, taglines) |
+| `game.js` | Brick Stacker mini-game (modal) |
 
 ## Local preview
 
