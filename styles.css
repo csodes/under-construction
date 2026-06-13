@@ -195,21 +195,33 @@ body {
 /* ---------- Game launch link ---------- */
 .game-link {
   display: inline-block;
-  margin-top: 0.9rem;
-  padding: 0.55rem 1.2rem;
-  font-size: 0.92rem;
-  font-weight: 600;
+  margin-top: 1.75rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--accent);
+  border: none;
   border-radius: 999px;
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 5px 0 #c34d1c;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  animation: gamePulse 2.2s ease-in-out infinite;
 }
 
 .game-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #c34d1c;
+}
+
+.game-link:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #c34d1c;
+}
+
+@keyframes gamePulse {
+  0%, 100% { box-shadow: 0 5px 0 #c34d1c, 0 0 0 0 rgba(255, 107, 53, 0.5); }
+  50% { box-shadow: 0 5px 0 #c34d1c, 0 0 0 10px rgba(255, 107, 53, 0); }
 }
 
 /* ---------- Game modal ---------- */
@@ -392,6 +404,7 @@ body {
   .title .word > span,
   .progress-fill,
   .floatie,
+  .game-link,
   .card {
     animation: none !important;
   }
