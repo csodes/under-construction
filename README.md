@@ -4,6 +4,8 @@ A fun, fully static "Under Construction" landing page. No build step, no
 dependencies — just open `index.html` in a browser (or deploy the folder to
 any static host like GitHub Pages, Netlify, or S3).
 
+https://csodes.github.io/under-construction/
+
 ## Features
 
 - 🎨 Animated gradient background
